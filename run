@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$1" != "-r" ]; then
+	echo "Run: Compile Source"
+  g++ -o pass-mana pass-mana.cpp SHA3_512.cpp AES.cpp -lssl -lcrypto
+fi
+
+echo "Run: Start Program"
+./pass-mana
